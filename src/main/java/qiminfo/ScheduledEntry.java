@@ -19,7 +19,7 @@ public class ScheduledEntry {
   Logger logger = Logger.getLogger(ScheduledEntry.class);
 
   @Transactional
-  @Scheduled(every = "PT15M")
+  @Scheduled(every = "{cron.entry}")
   void retrieveAndSendToApi() {
     service.getEntriesAndSend();
   }
