@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quarkus-entry-api-cm
+data:
+  HOST: quarkus-entry-api.npinaudswiss-dev.svc.cluster.local
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quarkus-batch-cron-cm
+data:
+  CRON_ENTRY: PT15M
